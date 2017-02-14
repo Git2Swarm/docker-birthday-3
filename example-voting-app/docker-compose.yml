@@ -4,6 +4,8 @@ services:
   voting-app:
     build: ./voting-app/.
     image: jcdemo/voting-app
+    ports:
+      - "7300:80"
     networks:
       - front-tier
       - back-tier
@@ -11,6 +13,8 @@ services:
   result-app:
     build: ./result-app/.
     image: jcdemo/result-app
+    ports:
+      - "7301:80"
     networks:
       - front-tier
       - back-tier
